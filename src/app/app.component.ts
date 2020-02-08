@@ -8,6 +8,8 @@ import { Component, AfterViewInit, OnInit, AfterViewChecked, ViewEncapsulation }
 })
 export class AppComponent implements OnInit, AfterViewChecked {
 
+  responseFromDb = {};
+
   dataArray = [
     'apple', 'banana', 'orange', 'papaya', 'apple', 'banana', 'orange', 'papaya', 'apple', 'banana', 'orange', 'papaya'
   ];
@@ -24,11 +26,25 @@ export class AppComponent implements OnInit, AfterViewChecked {
   mode = 'nightMode';
 
   ngOnInit(){
+    this.responseFromDb = {
+      details: {
+        user: {
+          name: 'John'
+        }
+      }
+    }
     console.log(document.getElementById('mode'));
   }
 
   ngAfterViewChecked(){
-    console.log(document.getElementById('mode'));
+  }
+
+  btnClick(){
+    this.dataArray = [];
+    this.dataArray = [
+      'apple', 'banana', 'orange', 'papaya', 'apple', 'banana', 'orange', 'papaya', 'apple', 'banana', 'orange', 'papaya', 'orange',
+    ];
+    console.log('Clicked');
   }
 
 

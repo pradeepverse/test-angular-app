@@ -1,12 +1,30 @@
 <div class="container">
     <div class="heading">
-        <button>
-            <mat-icon [class.liked]="liked" (click)="like()">thumb_up_alt</mat-icon>
-        </button>
         <ng-content select=".heading"></ng-content>
     </div>
     
     <div class="body">
         <ng-content select=".body"></ng-content>
+        <div *ngIf="showDescription" class="description">
+            Apple a day keeps doctor
+        </div>
+        <!-- <button *ngIf="!showDescription">Buy now</button> -->
+
+        <!-- <div *ngIf="showDescription; then description else buyButton" class="description">
+        </div>
+        <ng-template #description>
+            Apple a day keeps doctor
+        </ng-template>
+        <ng-template #buyButton>
+            <button *ngIf="!showDescription">Buy now</button>
+        </ng-template> -->
+
+        <div [ngSwitch]="myday">
+            <div *ngSwitchCase="'sunday'">{{days.sunday}}</div>
+            <div *ngSwitchCase="'monday'">{{days.monday}}</div>
+            <div *ngSwitchDefault>No conditions founds</div>
+        </div>
+
+
     </div>
 </div>

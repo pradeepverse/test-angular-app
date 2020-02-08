@@ -29,14 +29,33 @@
 <button (click)="showPost()" >Show post in console</button>
 </div> -->
 
-<app-panel *ngFor="let data of dataArray">
+<!-- <app-panel *ngFor="let data of dataArray">
     <ng-container class="heading">
         {{data}}
     </ng-container>
     <ng-container class="body">
         {{data}}
     </ng-container>
-</app-panel>
+</app-panel> -->
+
+<div class="username">
+    {{responseFromDb.details?.user?.name}}
+</div>
+
+<div class="products">
+    <ul class="product" *ngFor="let product of dataArray; index as i; even as e; odd as o; first as f; last as l">
+        <div 
+        [class.even]="e"
+        [class.odd]="o"
+        [class.first]="f"
+        [class.last]="l"
+        >
+            {{e}} {{i + 1}}. {{product}}
+        </div>
+    </ul>
+</div>
+
+<button (click)="btnClick()">click me</button>
 
 <!-- <app-post 
 *ngFor="let post of posts"

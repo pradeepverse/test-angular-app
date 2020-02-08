@@ -5,3 +5,24 @@ table, th, td {
   div{
     background-color: pink;
   }
+
+  .odd{
+    background-color: red;
+  }
+
+  .even{
+    background-color: green;
+  }
+
+  .first{
+    background-color: blue;
+  }
+
+  .last{
+    background-color: hotpink;
+  }
+
+  .username{
+    position: absolute;
+    right: 0;
+  }
