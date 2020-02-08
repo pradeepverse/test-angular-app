@@ -1,0 +1,9 @@
+<div class="post" (click)="goToPost()">
+    <div *ngIf="sponsored">Sponsored</div>
+    <div>{{name}}</div>
+    <div>{{post}}</div>
+    <button (click)="incrementLike($event); $event.stopPropagation()">
+        <span *ngIf="likes > 0">{{likes}}</span> Like</button>
+    <button>Comment</button>
+    <button>Share</button>
+</div>

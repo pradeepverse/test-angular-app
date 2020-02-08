@@ -1,0 +1,23 @@
+.container{
+    border: 1px solid #0000003b;
+    padding: 15px;
+    margin: 5px;
+    background: #b7cea1;
+}
+
+.heading{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.body{
+    margin-top: 5px;
+}
+
+mat-icon{
+    cursor: pointer;
+}
+
+.liked{
+    color: blue;
+}

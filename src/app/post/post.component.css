@@ -1,0 +1,23 @@
+.post{
+    border: 2px solid black;
+}
+
+.liked{
+    background-color: blue;
+    color: white;
+}
+
+.normal{
+    background-color: blue;
+    color: white;
+}
+
+.warning{
+    background-color: yellow;
+    color: white;
+}
+
+.danger{
+    background-color: red;
+    color: white;
+}

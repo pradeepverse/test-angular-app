@@ -1,0 +1,52 @@
+<!-- <app-header></app-header> -->
+
+<!-- <div>
+    Title - {{title | uppercase | lowercase}}
+</div> -->
+
+
+<!-- <div>
+    Count - {{studentCount | number}}
+</div>
+
+<div>
+    Rating - {{courseRating | number:'1.0-5'}}
+</div>
+
+<div>
+    Price - {{price | currency:'INR'}}
+</div>
+
+<div>
+    Date - {{courseDate | date:'M/d/yy, h:mm a'}}
+</div>
+
+<div>
+    Para - {{paragraph | hideText}}
+</div> -->
+
+<!-- <input id="mode" type="text" [value]="mode">
+<div id="container">
+    <div>Type your post here</div>
+
+<input id="post1" type="text" [(ngModel)]="myPost">
+
+<button (click)="showPost()" >Show post in console</button>
+</div> -->
+
+<app-panel *ngFor="let data of dataArray">
+    <ng-container class="heading">
+        {{data}}
+    </ng-container>
+    <ng-container class="body">
+        {{data}}
+    </ng-container>
+</app-panel>
+
+<!-- <app-post 
+*ngFor="let post of posts"
+[postObject]="post" 
+>
+</app-post> -->
+<!-- <app-footer></app-footer> -->
+
