@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HideTextPipe } from './hide-text.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PhoneNumberDirective } from './phone-number.directive';
+import { SignupFormComponent } from './signup-form/signup-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostComponent,
     FooterComponent,
     HideTextPipe,
-    PanelComponent
+    PanelComponent,
+    PhoneNumberDirective,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,

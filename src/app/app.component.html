@@ -38,24 +38,19 @@
     </ng-container>
 </app-panel> -->
 
-<div class="username">
+<!-- <div class="username">
     {{responseFromDb.details?.user?.name}}
 </div>
 
 <div class="products">
-    <ul class="product" *ngFor="let product of dataArray; index as i; even as e; odd as o; first as f; last as l">
-        <div 
-        [class.even]="e"
-        [class.odd]="o"
-        [class.first]="f"
-        [class.last]="l"
-        >
-            {{e}} {{i + 1}}. {{product}}
-        </div>
+    <ul class="product" *ngFor="let product of dataArray; trackBy: trackProduct">
+        {{product.product}}
     </ul>
 </div>
 
-<button (click)="btnClick()">click me</button>
+<input caseChange="UPPER"  type="text" placeholder="username"> -->
+
+<!-- <button (click)="btnClick()">click me</button> -->
 
 <!-- <app-post 
 *ngFor="let post of posts"
@@ -64,3 +59,4 @@
 </app-post> -->
 <!-- <app-footer></app-footer> -->
 
+<app-signup-form></app-signup-form>

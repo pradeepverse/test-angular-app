@@ -10,9 +10,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
 
   responseFromDb = {};
 
-  dataArray = [
-    'apple', 'banana', 'orange', 'papaya', 'apple', 'banana', 'orange', 'papaya', 'apple', 'banana', 'orange', 'papaya'
-  ];
+  dataArray;
 
   title = 'Angular course';
   studentCount = 4;
@@ -39,13 +37,22 @@ export class AppComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked(){
   }
 
-  btnClick(){
-    this.dataArray = [];
-    this.dataArray = [
-      'apple', 'banana', 'orange', 'papaya', 'apple', 'banana', 'orange', 'papaya', 'apple', 'banana', 'orange', 'papaya', 'orange',
-    ];
-    console.log('Clicked');
+  trackProduct(index, product){
+    return product ? product.id : undefined;
   }
+
+  btnClick(){
+    this.dataArray = [
+      {id: 1, product: 'apple'},
+      {id: 2, product: 'orange'},
+      {id: 3, product: 'banana'},
+      {id: 4, product: 'kiwi'}
+    ];
+  }
+
+  // trackProduct(index, product){
+  //   return product ? product.id : undefined;
+  // }
 
 
 

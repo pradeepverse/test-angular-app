@@ -2,26 +2,6 @@ table, th, td {
     border: 1px solid black;
   }
 
-  div{
-    background-color: pink;
-  }
-
-  .odd{
-    background-color: red;
-  }
-
-  .even{
-    background-color: green;
-  }
-
-  .first{
-    background-color: blue;
-  }
-
-  .last{
-    background-color: hotpink;
-  }
-
   .username{
     position: absolute;
     right: 0;
