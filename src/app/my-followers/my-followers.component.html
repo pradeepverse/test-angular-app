@@ -1,0 +1,7 @@
+<h2>List of followers</h2>
+
+<ul>
+    <li *ngFor="let follower of followers">
+        <b><a [routerLink]="['/followers', follower.name]">{{follower.name}}</a></b> following since {{follower.since}}
+    </li>
+</ul>

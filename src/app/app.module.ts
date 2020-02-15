@@ -1,3 +1,6 @@
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RouterModule } from '@angular/router';
+import { FollowersComponent } from './followers/followers.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
@@ -13,6 +16,11 @@ import { PanelComponent } from './panel/panel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PhoneNumberDirective } from './phone-number.directive';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { MyFollowersComponent } from './my-followers/my-followers.component';
+import { UserProfileComponent } from './user-profile/user-profile.component'
 
 @NgModule({
   declarations: [
@@ -24,13 +32,61 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     HideTextPipe,
     PanelComponent,
     PhoneNumberDirective,
-    SignupFormComponent
+    SignupFormComponent,
+    ProfileComponent,
+    FollowersComponent,
+    SignInComponent,
+    HomePageComponent,
+    MyFollowersComponent,
+    UserProfileComponent,
+    PageNotFoundComponent
   ],
   imports: [
+
+
+    RouterModule.forRoot([
+      {
+        path: 'sign-in',
+        component: SignInComponent
+      },
+      {
+        path: 'home-page',
+        component: HomePageComponent
+      },
+      {
+        path: 'followers',
+        component: MyFollowersComponent
+      },
+      {
+        path: 'followers/:name',
+        component: UserProfileComponent
+      },
+      {
+        path: '**',
+        component: PageNotFoundComponent
+      }
+    ]),
+
+
+
+
+
+
+
+
+
+
+
     BrowserModule,
     FormsModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    // RouterModule.forRoot([
+    //   {path: 'signup', component: SignupFormComponent},
+    //   {path: 'notfound', component: NotFoundComponent},
+    //   {path: 'followers/:id', component: ProfileComponent},
+    //   {path: 'followers', component: FollowersComponent}
+    // ])
   ],
   providers: [],
   bootstrap: [AppComponent]

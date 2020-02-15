@@ -1,0 +1,17 @@
+div{
+    width: 100vw;
+    height: 60px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+a{
+    padding: 10px;
+}
+
+a.highlight{
+    background-color: grey;
+    color: white;
+}
