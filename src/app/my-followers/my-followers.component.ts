@@ -18,7 +18,6 @@ export class MyFollowersComponent implements OnInit {
       data => {
         this.pageNo = data.get('pageNo');
         this.sortType = data.get('sort');
-        this.http.get(`www.face.com/followers?sort=${this.sortType}&pageNo=${this.pageNo}`);
       }
     )
   }
