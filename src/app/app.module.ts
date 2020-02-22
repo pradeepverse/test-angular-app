@@ -21,6 +21,11 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MyFollowersComponent } from './my-followers/my-followers.component';
 import { UserProfileComponent } from './user-profile/user-profile.component'
+import { HttpClientModule } from '@angular/common/http';
+import { PostsComponent } from './posts/posts.component';
+import { MyPostsComponent } from './my-posts/my-posts.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -39,12 +44,18 @@ import { UserProfileComponent } from './user-profile/user-profile.component'
     HomePageComponent,
     MyFollowersComponent,
     UserProfileComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PostsComponent,
+    MyPostsComponent
   ],
   imports: [
 
 
     RouterModule.forRoot([
+      {
+        path: '',
+        component: MyPostsComponent
+      },
       {
         path: 'sign-in',
         component: SignInComponent
@@ -66,27 +77,12 @@ import { UserProfileComponent } from './user-profile/user-profile.component'
         component: PageNotFoundComponent
       }
     ]),
-
-
-
-
-
-
-
-
-
-
-
     BrowserModule,
     FormsModule,
     MatIconModule,
     BrowserAnimationsModule,
-    // RouterModule.forRoot([
-    //   {path: 'signup', component: SignupFormComponent},
-    //   {path: 'notfound', component: NotFoundComponent},
-    //   {path: 'followers/:id', component: ProfileComponent},
-    //   {path: 'followers', component: FollowersComponent}
-    // ])
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

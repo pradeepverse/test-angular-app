@@ -1,0 +1,14 @@
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">Type your message</span>
+    </div>
+    <input (keyup.enter)="post(postInput)" #postInput type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+<ul class="list-group">
+    <li *ngFor="let post of posts" class="list-group-item">
+        <button (click)="put(post)" type="button" class="btn btn-secondary">Edit</button> 
+        {{post.title}}
+        <button (click)="delete(post)" type="button" class="btn btn-danger">Delete</button>
+    </li>
+</ul>
