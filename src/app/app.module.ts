@@ -1,3 +1,4 @@
+import { AuthGuardService } from './auth-guard.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { FollowersComponent } from './followers/followers.component';
@@ -25,6 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
 import { MyPostsComponent } from './my-posts/my-posts.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FundamentalComponent } from './testing/fundamental/fundamental.component';
+import { VoteComponent } from './testing/vote/vote.component';
 
 
 @NgModule({
@@ -46,7 +49,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     UserProfileComponent,
     PageNotFoundComponent,
     PostsComponent,
-    MyPostsComponent
+    MyPostsComponent,
+    FundamentalComponent,
+    VoteComponent
   ],
   imports: [
 
@@ -54,7 +59,12 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     RouterModule.forRoot([
       {
         path: '',
-        component: MyPostsComponent
+        component: SignInComponent
+      },
+      {
+        path: 'posts',
+        component: MyPostsComponent,
+        canActivate: [AuthGuardService]
       },
       {
         path: 'sign-in',

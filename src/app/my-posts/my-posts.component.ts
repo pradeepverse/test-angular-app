@@ -1,6 +1,7 @@
 import { MyAPIserviceService } from './../my-apiservice.service';
 import { Component, OnInit } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-posts',
@@ -12,7 +13,7 @@ export class MyPostsComponent implements OnInit {
 
   posts;
 
-  constructor(private myAPIService: MyAPIserviceService, private _snackBar: MatSnackBar) {
+  constructor(private myAPIService: MyAPIserviceService, private _snackBar: MatSnackBar, private router: Router) {
     
    }
 
@@ -69,6 +70,10 @@ export class MyPostsComponent implements OnInit {
         console.log(this.posts);
       }
     )
+  }
+
+  signOut(){
+    this.router.navigate(['/']);
   }
 
 }

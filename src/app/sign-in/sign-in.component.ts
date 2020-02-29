@@ -15,7 +15,7 @@ export class SignInComponent implements OnInit {
 
   signIn(){
     localStorage.setItem('token', "fsdfasdfd234234fdasd");
-    this.router.navigate(['/home-page']);
+    this.router.navigate(['/posts']);
   }
 
 }

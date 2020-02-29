@@ -3,6 +3,7 @@
       <span class="input-group-text" id="inputGroup-sizing-default">Type your message</span>
     </div>
     <input (keyup.enter)="post(postInput)" #postInput type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <button (click)="signOut()">Sign out</button>
   </div>
 
 <ul class="list-group">

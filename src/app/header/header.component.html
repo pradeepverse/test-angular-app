@@ -1,5 +1,5 @@
 <div>
     <a routerLinkActive="highlight" routerLink="/home-page">Home</a> 
     <a routerLinkActive="highlight" routerLink="/followers" [queryParams]="{sort: 'asc', pageNo: 1}">Followers</a>
-    <a *ngIf="!auth.isUserSignedIn()" (click)="signOut()">Sign Out</a>
+    <a *ngIf="auth.isUserSignedIn()" (click)="signOut()">Sign Out</a>
 </div>
